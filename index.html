@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar"></div>
+    <div class="form-container">
+        <img src="./bg-sidebar-desktop.svg" style="padding-right: 70px;"  alt="" >
+        <form id="multiStepForm">
+
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <h2>Personal Info</h2>
+                <p>Please provide your name, email address, and phone number</p>
+    
+                <!-- One "tab" for each step in the form: -->
+              <label for="tab">Name</label>
+                <p><input type="text" id="name" placeholder="e.g. Ojo Damilare"required>  				
+              <label for="tab">Email Address</label>
+                <p><input type="text" id="email" placeholder="e.g., ojodamilarey@lorem.com"required>
+              <label for="tab">Phone number</label>
+                <p><input type="text" id="name" placeholder="e.g., +234 8045678902"required>
+                <button type="button" onclick="nextStep()">Next Step</button>
+            </div>
+            <!-- Step 2 -->
+            <div class="form-step">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing</p>
+
+    	        <!-- Plan options here -->
+                <button type="button" onclick="gobacktStep()">GoBack</button> 
+                <button type="button" onclick="nextStep()">Next Step</button>
+            </div>
+            <!-- Step 3 -->
+        <div class="form-step">
+            <h2>Pick Add-Ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <!-- Add-ons options here -->
+            <button type="button" onclick="gobacktStep()">GoBack</button>
+            <button type="button" onclick="nextStep()">Next Step</button>
+        </div>
+            <!-- Step 4 -->
+        <div class="form-step">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming</p>
+        </div>
+
+        <!-- Finishing up details here -->
+            <div>
+                <button type="button" class="go-back-step">GoBack</button>
+                <button type="submit">Confirm</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>    
